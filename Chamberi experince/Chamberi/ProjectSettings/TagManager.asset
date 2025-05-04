@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - Desactivable
+  - Key
   layers:
   - Default
   - TransparentFX
