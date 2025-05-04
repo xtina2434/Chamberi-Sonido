@@ -7,6 +7,9 @@ public class AudioPlay : MonoBehaviour
     [SerializeField]
     public AudioClip sonido;
     public AudioSource source;
+
+    [SerializeField]
+    Material materialPasar, materialNoPasar;
     public void PlayTrain()
     {
         source.PlayOneShot(sonido);
@@ -14,18 +17,34 @@ public class AudioPlay : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Colisionando");
         PlayTrain();
 
         Collider[] childColliders = GetComponentsInChildren<Collider>();
 
         foreach (Collider col in childColliders)
         {
-            Debug.Log("objetos");
             if (col.gameObject.CompareTag("Desactivable"))
             {
-                Debug.Log("desactivado");
                 col.enabled = false;
+
+                Renderer renderer = col.gameObject.GetComponent<Renderer>();
+                renderer.material = materialPasar;
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        Collider[] childColliders = GetComponentsInChildren<Collider>();
+
+        foreach (Collider col in childColliders)
+        {
+            if (col.gameObject.CompareTag("Desactivable"))
+            {
+                col.enabled = true;
+
+                Renderer renderer = col.gameObject.GetComponent<Renderer>();
+                renderer.material = materialNoPasar;
             }
         }
     }
