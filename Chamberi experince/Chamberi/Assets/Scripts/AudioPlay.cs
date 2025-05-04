@@ -11,4 +11,22 @@ public class AudioPlay : MonoBehaviour
     {
         source.PlayOneShot(sonido);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Colisionando");
+        PlayTrain();
+
+        Collider[] childColliders = GetComponentsInChildren<Collider>();
+
+        foreach (Collider col in childColliders)
+        {
+            Debug.Log("objetos");
+            if (col.gameObject.CompareTag("Desactivable"))
+            {
+                Debug.Log("desactivado");
+                col.enabled = false;
+            }
+        }
+    }
 }
