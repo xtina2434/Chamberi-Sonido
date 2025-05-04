@@ -26573,6 +26573,8 @@ GameObject:
   - component: {fileID: 963615835}
   - component: {fileID: 963615834}
   - component: {fileID: 963615833}
+  - component: {fileID: 963615836}
+  - component: {fileID: 963615837}
   m_Layer: 0
   m_Name: Plane (71)
   m_TagString: Untagged
@@ -26667,6 +26669,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963615831}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &963615836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963615831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537aab30b9e98c749ab67e454717b22b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &963615837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963615831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537aab30b9e98c749ab67e454717b22b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &967697815
 GameObject:
   m_ObjectHideFlags: 0
@@ -35492,7 +35518,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: NaN, y: 3.2850625e+30, z: 8.58e-43, w: 3.2850093e+30}
+  m_BoundingSphereOverride: {x: -0.6666667, y: 10.000001, z: 8.666667, w: -11.333333}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
