@@ -8,23 +8,13 @@ public class Menu : MonoBehaviour
     GameObject _playCanvas;
     [SerializeField]
     GameObject _pauseCanvas;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    GameObject _settingsCanvas;
 
     public void Pause()
     {
         // Activar canvas de play
-        _playCanvas.SetActive(true);
+        _settingsCanvas.SetActive(true);
     }
 
     public void Play()
