@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="SnapshotList" id="{2660dbe9-3108-4245-869d-37229ca0bc7b}">
 		<relationship name="items">
-			<destination>{8dd9cbf3-703a-468e-a9e3-b2e4f3d376e2}</destination>
+			<destination>{146fa006-ce0e-46c9-8c3b-166649cce83e}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{60c2eafe-877a-4817-88f4-5636599457a1}</destination>
