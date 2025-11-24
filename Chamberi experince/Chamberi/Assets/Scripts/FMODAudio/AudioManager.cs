@@ -7,7 +7,12 @@ using FMOD.Studio;
 
 public class AudioManager : MonoBehaviour
 {
-   public static AudioManager instance { get; private set; }
+    private List<EventInstance> eventInstances;
+    private List<StudioEventEmitter> eventEmitters;
+
+    private EventInstance ambienceCreepyEventInstance;
+
+    public static AudioManager instance { get; private set; }
 
     private void Awake()
     {
@@ -16,6 +21,19 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("Se ha encontrado mas de un Audio Manager en la escena.");
         }
         instance = this;
+
+        eventInstances = new List<EventInstance>();
+        eventEmitters = new List<StudioEventEmitter>();
+    }
+
+    private void Start()
+    {
+         InitializateAmbience(FMODEvents.instance.ambience);
+    }
+    private void InitializateAmbience(EventReference ambienceEventReference)
+    {
+        ambienceCreepyEventInstance = CreateEventInstance(ambienceEventReference);
+        ambienceCreepyEventInstance.start();
     }
 
     public void PlayOneShot(EventReference sound, Vector3 position) {
@@ -26,6 +44,7 @@ public class AudioManager : MonoBehaviour
     public EventInstance CreateEventInstance(EventReference eventReference)
     {
         EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+        eventInstances.Add(eventInstance);
         return eventInstance;
     }
 }

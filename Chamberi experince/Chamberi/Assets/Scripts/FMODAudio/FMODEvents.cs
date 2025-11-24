@@ -4,6 +4,9 @@ using UnityEngine;
 using FMODUnity;
 public class FMODEvents : MonoBehaviour
 {
+    [field: Header("Ambience Creepy")]
+    [field: SerializeField] public EventReference ambience { get; private set; }
+    
     [field: Header("Player SFX")]
     [field: SerializeField] public EventReference playerFootsteps  { get; private set; }
 

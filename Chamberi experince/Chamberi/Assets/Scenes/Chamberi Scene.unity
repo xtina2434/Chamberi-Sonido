@@ -24420,20 +24420,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0facfda73d1a5c247aebb7056d5be09c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ambience>k__BackingField:
+    Guid:
+      Data1: 1106135979
+      Data2: 1107150011
+      Data3: 1152279212
+      Data4: 1593888129
+    Path: event:/Ambience/Creepy
   <playerFootsteps>k__BackingField:
     Guid:
       Data1: 590107101
       Data2: 1187971739
       Data3: 1111298485
       Data4: -926130852
-    Path: event:/Pasos
+    Path: event:/SFX/Pasos
   <ratSound>k__BackingField:
     Guid:
       Data1: -1294251885
       Data2: 1076905387
       Data3: -1574802517
       Data4: -741838007
-    Path: event:/Rata
+    Path: event:/SFX/Rata
 --- !u!1001 &812018815
 PrefabInstance:
   m_ObjectHideFlags: 0
