@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="MixerReturn" id="{131732c5-2ca5-41a7-bb13-5658548fdacd}">
+		<property name="name">
+			<value>Reverb Bus</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{fa71f7b3-5512-49d4-9577-2a9c796c792c}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{618cb08d-7c78-4324-9000-d1f46502849a}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{1b7ebf60-62c3-46cf-b04c-b8b79087904f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{fa71f7b3-5512-49d4-9577-2a9c796c792c}">
+		<relationship name="effects">
+			<destination>{a0d701a2-d3f7-40d8-bb8a-83eb4c6ad488}</destination>
+			<destination>{30c853b0-68c2-47b7-bbbb-e136c437f9e3}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{618cb08d-7c78-4324-9000-d1f46502849a}" />
+	<object class="SFXReverbEffect" id="{a0d701a2-d3f7-40d8-bb8a-83eb4c6ad488}" />
+	<object class="MixerBusFader" id="{30c853b0-68c2-47b7-bbbb-e136c437f9e3}" />
+</objects>
