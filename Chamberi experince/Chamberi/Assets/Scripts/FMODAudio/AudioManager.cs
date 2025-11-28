@@ -28,12 +28,6 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-         InitializateAmbience(FMODEvents.instance.ambience);
-    }
-    private void InitializateAmbience(EventReference ambienceEventReference)
-    {
-        ambienceCreepyEventInstance = CreateEventInstance(ambienceEventReference);
-        ambienceCreepyEventInstance.start();
     }
 
     public void PlayOneShot(EventReference sound, Vector3 position) {

@@ -48,7 +48,7 @@
 			<value>decayTime</value>
 		</property>
 		<property name="value">
-			<value>2900</value>
+			<value>10000</value>
 		</property>
 		<relationship name="automatableObject">
 			<destination>{a0d701a2-d3f7-40d8-bb8a-83eb4c6ad488}</destination>
@@ -59,7 +59,7 @@
 			<value>earlyDelay</value>
 		</property>
 		<property name="value">
-			<value>15</value>
+			<value>20</value>
 		</property>
 		<relationship name="automatableObject">
 			<destination>{a0d701a2-d3f7-40d8-bb8a-83eb4c6ad488}</destination>
@@ -70,7 +70,7 @@
 			<value>lateDelay</value>
 		</property>
 		<property name="value">
-			<value>22</value>
+			<value>30</value>
 		</property>
 		<relationship name="automatableObject">
 			<destination>{a0d701a2-d3f7-40d8-bb8a-83eb4c6ad488}</destination>
@@ -92,7 +92,7 @@
 			<value>HFDecayRatio</value>
 		</property>
 		<property name="value">
-			<value>100</value>
+			<value>23</value>
 		</property>
 		<relationship name="automatableObject">
 			<destination>{a0d701a2-d3f7-40d8-bb8a-83eb4c6ad488}</destination>
@@ -147,7 +147,7 @@
 			<value>highCut</value>
 		</property>
 		<property name="value">
-			<value>20000</value>
+			<value>3400</value>
 		</property>
 		<relationship name="automatableObject">
 			<destination>{a0d701a2-d3f7-40d8-bb8a-83eb4c6ad488}</destination>
@@ -158,7 +158,7 @@
 			<value>earlyLateMix</value>
 		</property>
 		<property name="value">
-			<value>59</value>
+			<value>72</value>
 		</property>
 		<relationship name="automatableObject">
 			<destination>{a0d701a2-d3f7-40d8-bb8a-83eb4c6ad488}</destination>
@@ -169,7 +169,7 @@
 			<value>wetLevel</value>
 		</property>
 		<property name="value">
-			<value>-11.3000002</value>
+			<value>-7.4000001</value>
 		</property>
 		<relationship name="automatableObject">
 			<destination>{a0d701a2-d3f7-40d8-bb8a-83eb4c6ad488}</destination>
