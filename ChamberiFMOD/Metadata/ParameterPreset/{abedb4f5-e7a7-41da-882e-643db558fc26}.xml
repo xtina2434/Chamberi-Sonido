@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{abedb4f5-e7a7-41da-882e-643db558fc26}">
+		<property name="name">
+			<value>obstruccion_tormenta</value>
+		</property>
+		<relationship name="folder">
+			<destination>{19cc73a2-e849-412e-8b9e-04bf2efa1385}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{63e4e92c-4a1b-4801-bbce-1dd124fec6cd}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{63e4e92c-4a1b-4801-bbce-1dd124fec6cd}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

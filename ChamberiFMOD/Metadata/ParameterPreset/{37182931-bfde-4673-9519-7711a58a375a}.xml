@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{37182931-bfde-4673-9519-7711a58a375a}">
+		<property name="name">
+			<value>volumen_tormenta</value>
+		</property>
+		<relationship name="folder">
+			<destination>{19cc73a2-e849-412e-8b9e-04bf2efa1385}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{12812e98-9abc-495f-aa46-d1ffe88ec2a6}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{12812e98-9abc-495f-aa46-d1ffe88ec2a6}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{065294c0-a9c9-49c9-b021-2d510b4d5961}">
+		<property name="name">
+			<value>frecuencia_tormenta</value>
+		</property>
+		<relationship name="folder">
+			<destination>{19cc73a2-e849-412e-8b9e-04bf2efa1385}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c25e79c9-9b6f-456e-b4ab-62ab7dd9c3f7}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c25e79c9-9b6f-456e-b4ab-62ab7dd9c3f7}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
