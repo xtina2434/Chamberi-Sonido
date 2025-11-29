@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
+    // indice de la zona de reverb por donde este pasando el jugador
+    private int currentReverbIndex = -1;
+
     // evento de FMOD de pasos del jugador
     private EventInstance playerFootsteps;
 
@@ -77,11 +80,24 @@ public class CharacterManager : MonoBehaviour
     {
         if (isMoving)
         {
+            // Aplicar reverb si estamos en una zona de reverb
+            if (currentReverbIndex >= 0)
+            {
+                playerFootsteps.setReverbLevel(currentReverbIndex, 1.0f);
+            }
+            else
+            {
+                // fuera de zonas, reverb OFF
+                playerFootsteps.setReverbLevel(0, 0.0f);
+                playerFootsteps.setReverbLevel(1, 0.0f);
+                playerFootsteps.setReverbLevel(2, 0.0f);
+                playerFootsteps.setReverbLevel(3, 0.0f);
+            }
+            //si el sonido esta detenido, se inicia
             PLAYBACK_STATE playbackState;
-            // estado actual de la instancia de sonido
-            playerFootsteps.getPlaybackState(out playbackState);
+            //estado actual de la instancia de sonido
+           playerFootsteps.getPlaybackState(out playbackState);
 
-            // si el sonido esta detenido, se inicia
             if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
             {
                 playerFootsteps.start();
@@ -95,6 +111,24 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        ReverbManager reverbZone = other.GetComponent<ReverbManager>();
+        if(reverbZone != null)
+        {
+            currentReverbIndex = reverbZone.reverbIndex;
+            Debug.Log($"Entramos en zona Reverb: {other.name}, Preset: {reverbZone.preset}, Index: {reverbZone.reverbIndex}");
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        ReverbManager reverbZone = other.GetComponent<ReverbManager>();
+        if(reverbZone != null)
+        {
+            currentReverbIndex = -1;
+            Debug.Log($"Salimos de zona Reverb: {other.name}, Preset: {reverbZone.preset}");
+        }
+    }
     private void OnDestroy()
     {
         playerFootsteps.release();
