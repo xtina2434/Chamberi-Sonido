@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     private List<EventInstance> eventInstances;
     private List<StudioEventEmitter> eventEmitters;
 
-    public EventInstance ambienceCreepyEventInstance;
+    private EventInstance ambienceCreepyEventInstance;
 
     public static AudioManager instance { get; private set; }
 
@@ -28,17 +28,6 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        InitializeAmbience(FMODEvents.instance.ambience);
-    }
-    private void InitializeAmbience (EventReference ambienceEventReference)
-    {
-        ambienceCreepyEventInstance = CreateEventInstance(ambienceEventReference);
-        ambienceCreepyEventInstance.start();
-        ambienceCreepyEventInstance.setParameterByName("ambience_intensity", 0.0f);
-    }
-    public void SetAmbienceParameter(string parameterName, float parameterValue)
-    {
-        ambienceCreepyEventInstance.setParameterByName(parameterName, parameterValue);
     }
 
     public void PlayOneShot(EventReference sound, Vector3 position) {
