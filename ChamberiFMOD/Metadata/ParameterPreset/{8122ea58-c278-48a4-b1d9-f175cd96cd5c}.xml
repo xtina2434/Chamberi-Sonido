@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{8122ea58-c278-48a4-b1d9-f175cd96cd5c}">
+		<property name="name">
+			<value>ambience_intensity</value>
+		</property>
+		<relationship name="folder">
+			<destination>{19cc73a2-e849-412e-8b9e-04bf2efa1385}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3090ec6a-9c4a-4d1d-8316-15268bb862d4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3090ec6a-9c4a-4d1d-8316-15268bb862d4}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
