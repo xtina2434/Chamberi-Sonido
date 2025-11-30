@@ -18776,6 +18776,7 @@ GameObject:
   - component: {fileID: 560313801}
   - component: {fileID: 560313803}
   - component: {fileID: 560313802}
+  - component: {fileID: 560313804}
   m_Layer: 0
   m_Name: light (7)
   m_TagString: Untagged
@@ -18850,6 +18851,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560313800}
   m_Mesh: {fileID: -3958770277684823056, guid: b012f6cadd440a84b8713108d3e7372e, type: 3}
+--- !u!114 &560313804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560313800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1798438602
+      Data2: 1338782933
+      Data3: -622362702
+      Data4: -1659152698
+    Path: event:/SFX/Electricidad
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &560524620
 GameObject:
   m_ObjectHideFlags: 0
@@ -64346,7 +64378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1668490814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66724,6 +66756,7 @@ GameObject:
   - component: {fileID: 1764333469}
   - component: {fileID: 1764333471}
   - component: {fileID: 1764333470}
+  - component: {fileID: 1764333472}
   m_Layer: 0
   m_Name: light (1)
   m_TagString: Untagged
@@ -66798,6 +66831,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764333468}
   m_Mesh: {fileID: -3958770277684823056, guid: b012f6cadd440a84b8713108d3e7372e, type: 3}
+--- !u!114 &1764333472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764333468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1798438602
+      Data2: 1338782933
+      Data3: -622362702
+      Data4: -1659152698
+    Path: event:/SFX/Electricidad
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1766598612
 GameObject:
   m_ObjectHideFlags: 0
