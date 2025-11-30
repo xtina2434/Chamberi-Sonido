@@ -17,6 +17,11 @@ public class FMODEvents : MonoBehaviour
 
     [field : Header("Rat SFX")]
     [field: SerializeField] public EventReference ratSound { get; private set;}
+
+    [field: Header("Linterna SFX")]
+    [field: SerializeField] public EventReference click { get; private set; }
+    [field: Header("Torno SFX")]
+    [field: SerializeField] public EventReference torno { get; private set; }
     public static FMODEvents instance { get; private set; }
     private void Awake()
     {
