@@ -25295,10 +25295,10 @@ MonoBehaviour:
     Path: event:/SFX/Linterna
   <torno>k__BackingField:
     Guid:
-      Data1: -23658073
-      Data2: 1339773504
-      Data3: -851780978
-      Data4: 315339856
+      Data1: 673393887
+      Data2: 1201684629
+      Data3: 935699358
+      Data4: 960273463
     Path: event:/SFX/Tornos
 --- !u!1001 &812018815
 PrefabInstance:
@@ -26408,7 +26408,6 @@ Transform:
   - {fileID: 1976373791}
   - {fileID: 1473942327}
   - {fileID: 2132488595}
-  - {fileID: 1253278970}
   m_Father: {fileID: 642833928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &877908075
@@ -39200,91 +39199,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231874360}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1253278969
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1253278970}
-  - component: {fileID: 1253278972}
-  - component: {fileID: 1253278971}
-  m_Layer: 0
-  m_Name: Tornos (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1253278970
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253278969}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.08, z: 5.04}
-  m_LocalScale: {x: 1, y: 17.550097, z: 1.25}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 877908074}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1253278971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253278969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  EventReference:
-    Guid:
-      Data1: -23658073
-      Data2: 1339773504
-      Data3: -851780978
-      Data4: 315339856
-    Path: event:/SFX/Tornos
-  Event: 
-  EventPlayTrigger: 3
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!65 &1253278972
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253278969}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1254744896 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 17258620870609216, guid: 71a6bd7a9dcd18e49a6d20ac8ee4a697, type: 3}
@@ -64432,7 +64346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1668490814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81209,10 +81123,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2132488595}
-  - component: {fileID: 2132488597}
   - component: {fileID: 2132488596}
+  - component: {fileID: 2132488598}
+  - component: {fileID: 2132488599}
   m_Layer: 0
-  m_Name: Tornos
+  m_Name: Torno_Entrada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81227,8 +81142,8 @@ Transform:
   m_GameObject: {fileID: 2132488594}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.08, z: -1.263}
-  m_LocalScale: {x: 1, y: 17.550097, z: 1.25}
+  m_LocalPosition: {x: 0, y: -5.08, z: -1.81}
+  m_LocalScale: {x: 1.8797, y: 17.550097, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 877908074}
@@ -81248,13 +81163,13 @@ MonoBehaviour:
   CollisionTag: Player
   EventReference:
     Guid:
-      Data1: -23658073
-      Data2: 1339773504
-      Data3: -851780978
-      Data4: 315339856
+      Data1: 673393887
+      Data2: 1201684629
+      Data3: 935699358
+      Data4: 960273463
     Path: event:/SFX/Tornos
   Event: 
-  EventPlayTrigger: 3
+  EventPlayTrigger: 0
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -81264,7 +81179,19 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!65 &2132488597
+--- !u!114 &2132488598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132488594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6e03353329c764bbee8d4d3a5b69c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2132488599
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
