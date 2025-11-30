@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem.Controls;
-using static UnityEngine.GraphicsBuffer;
+
+
 
 public class AmbienceVolume : MonoBehaviour
 {
-    [Header("Parameter Change")]
-    [SerializeField]
-    private string parameterName;
+    // intensidad ambiente creepy
+    private string intensityParam = "ambience_intensity";
 
     private float maxIntensity = 1.0f;
     private float fade = 2.0f;
@@ -29,21 +27,20 @@ public class AmbienceVolume : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AudioManager.instance.ambienceCreepyEventInstance.getParameterByName(parameterName, out float v);
-        currentIntensity = v;
-
-
         if (playerInside)
         {
             Vector3 toPlayer = player.position - transform.position;
 
             float signed = Vector3.Dot(toPlayer, transform.forward);
 
+            AudioManager.instance.ambienceCreepyEventInstance.getParameterByName(intensityParam, out currentIntensity);
+          
+
             if (signed <= 0f)
             {
                 float target = 0f;
                 currentIntensity = Mathf.Lerp(currentIntensity, target, Time.deltaTime * fade);
-                AudioManager.instance.SetAmbienceParameter(parameterName, currentIntensity);
+               
             }
             else
             {
@@ -51,14 +48,16 @@ public class AmbienceVolume : MonoBehaviour
                 float target = Mathf.Lerp(0f, maxIntensity, t);
 
                 currentIntensity = Mathf.Lerp(currentIntensity, target,Time.deltaTime * fade);
-                AudioManager.instance.SetAmbienceParameter(parameterName, currentIntensity);
+              
             }
+
+            AudioManager.instance.ambienceCreepyEventInstance.setParameterByName(intensityParam, currentIntensity);
         }
         else
         {
             currentIntensity = Mathf.Lerp(currentIntensity, 0f, Time.deltaTime * fade);
 
-            AudioManager.instance.SetAmbienceParameter(parameterName,currentIntensity);
+            AudioManager.instance.ambienceCreepyEventInstance.setParameterByName(intensityParam, currentIntensity);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -66,16 +65,6 @@ public class AmbienceVolume : MonoBehaviour
         if (other.CompareTag("Player"))
         {
            playerInside = true;
-           Debug.Log("entro");
         }
     }
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        playerInside = false;
-    //        Debug.Log("salgo");
-    //    }
-    //}
 }

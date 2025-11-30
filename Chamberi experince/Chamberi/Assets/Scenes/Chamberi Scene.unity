@@ -13222,6 +13222,7 @@ GameObject:
   - component: {fileID: 389258688}
   - component: {fileID: 389258690}
   - component: {fileID: 389258689}
+  - component: {fileID: 389258691}
   m_Layer: 0
   m_Name: Entrada
   m_TagString: Untagged
@@ -13256,7 +13257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf620d63ec617d4c9119eb20e752f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parameterName: ambience_intensity
 --- !u!65 &389258690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13278,6 +13278,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &389258691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389258687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a5333dd51e8d14bb277e9a2903c0b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &389670685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19831,7 +19843,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 389258688}
-  - {fileID: 1684427651}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &600695438 stripped
@@ -65104,79 +65115,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1003d17e7f21c5f40be7fbcd8f169ae3, type: 3}
   m_PrefabInstance: {fileID: 1684086418}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1684427650
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1684427651}
-  - component: {fileID: 1684427652}
-  m_Layer: 0
-  m_Name: Tormenta
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1684427651
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684427650}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 592108448}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1684427652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684427650}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1925968242
-      Data2: 1143685243
-      Data3: 461235880
-      Data4: -136563281
-    Path: event:/Ambience/Tormenta
-  Event: 
-  EventPlayTrigger: 1
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params:
-  - Name: frecuencia_tormenta
-    Value: 0
-  - Name: intensidad_tormenta
-    Value: 0
-  - Name: obstruccion_tormenta
-    Value: 0
-  - Name: oclusion_tormenta
-    Value: 0
-  - Name: volumen_tormenta
-    Value: 0
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1685417008
 GameObject:
   m_ObjectHideFlags: 0

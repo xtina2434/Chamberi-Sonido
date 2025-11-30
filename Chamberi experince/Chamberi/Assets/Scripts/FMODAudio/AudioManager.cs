@@ -41,15 +41,9 @@ public class AudioManager : MonoBehaviour
     private void InitializeTormenta(EventReference tormentaEventReference)
     {
         tormentaEventInstance = CreateEventInstance(tormentaEventReference);
-        tormentaEventInstance.setParameterByName("volumen_tormenta", 1.0f);
-        tormentaEventInstance.setParameterByName("intensidad_tormenta", 0.2f);
-        tormentaEventInstance.setParameterByName("frecuencia_tormenta", 0.5f);
         tormentaEventInstance.start();
-       
-    }
-    public void SetAmbienceParameter(string parameterName, float parameterValue)
-    {
-        ambienceCreepyEventInstance.setParameterByName(parameterName, parameterValue);
+        tormentaEventInstance.setParameterByName("volumen_tormenta", 1.0f);
+
     }
 
     public void PlayOneShot(EventReference sound, Vector3 position) {
