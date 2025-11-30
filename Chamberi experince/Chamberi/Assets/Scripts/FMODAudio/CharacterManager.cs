@@ -111,6 +111,10 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
+    public  int getReverbIndex()
+    {
+        return currentReverbIndex;
+    }
     private void OnTriggerEnter(Collider other)
     {
         ReverbManager reverbZone = other.GetComponent<ReverbManager>();
