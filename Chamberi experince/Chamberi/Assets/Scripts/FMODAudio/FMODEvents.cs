@@ -4,6 +4,8 @@ using UnityEngine;
 using FMODUnity;
 public class FMODEvents : MonoBehaviour
 {
+    [field: Header("Metro SFX")]
+    [field: SerializeField] public EventReference metro { get; private set; }
     [field: Header("Ambience Creepy")]
     [field: SerializeField] public EventReference ambience { get; private set; }
 
