@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class AmbienceVolume : MonoBehaviour
 {
     // intensidad ambiente creepy

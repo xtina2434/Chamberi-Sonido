@@ -7,8 +7,6 @@ public class AmbienceStorm : MonoBehaviour
 {
     private string intensityParam = "intensidad_tormenta";
     private string frequencyParam = "frecuencia_tormenta";
-
-
     private string obsParam = "obstruccion_tormenta";
     private string oclParam = "oclusion_tormenta";
 
@@ -16,23 +14,18 @@ public class AmbienceStorm : MonoBehaviour
     private float frequencySpeed = 0.5f;
 
     private bool playerInside = false;
-    private float maxValue = 1.0f;
     private float fade = 0.5f;
     private float currentValue = 0f;
-    private float maxDistance = 50f;
+    private float maxDistance = 30f;
     private Transform player;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
-
-
-    // Update is called once per frame
     void Update()
     {
         float intensityValue = Mathf.PingPong(Time.time * intensitySpeed, 1f);
-        //float frequencyValue = Mathf.PingPong(Time.time * frequencySpeed, 1f);
 
         float frequencyValue = 0.0f;
 
@@ -51,8 +44,6 @@ public class AmbienceStorm : MonoBehaviour
 
             float t = Mathf.Clamp01(distance / maxDistance);
             float target = Mathf.Lerp(0f, 1f, t);
-
-            //float target = playerInside ? 1f : 0f;
 
             currentValue = Mathf.Lerp(currentValue, target, Time.deltaTime * fade);
         }
