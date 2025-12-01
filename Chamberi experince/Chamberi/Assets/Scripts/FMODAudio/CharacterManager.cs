@@ -1,4 +1,5 @@
 using FMOD.Studio;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class CharacterManager : MonoBehaviour
 {
     // indice de la zona de reverb por donde este pasando el jugador
     private int currentReverbIndex = -1;
-
+    private int previousReverbIndex = -1;
     // evento de FMOD de pasos del jugador
     private EventInstance playerFootsteps;
 
@@ -22,6 +23,10 @@ public class CharacterManager : MonoBehaviour
 
     // bandera que indica si el personaje esta moviendose
     private bool isMoving = false;
+
+    private Coroutine reverbFadeCoroutine;
+    private float fade = 1.0f;
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -64,15 +69,7 @@ public class CharacterManager : MonoBehaviour
         float distanceMoved = Vector3.Distance(currentHorizontal, lastHorizontal);
 
         // si la distancia movida supera el umbral minimo, se considera que el personaje esta en movimiento
-        if (distanceMoved > minDistanceMoved)
-        {
-            isMoving = true;
-        }
-        else
-        {
-            isMoving= false;
-        }
-
+        isMoving = distanceMoved > minDistanceMoved;
         // actualizar ultima posicion
         lastPosition = currentPosition;
     }
@@ -80,19 +77,6 @@ public class CharacterManager : MonoBehaviour
     {
         if (isMoving)
         {
-            // Aplicar reverb si estamos en una zona de reverb
-            if (currentReverbIndex >= 0)
-            {
-                playerFootsteps.setReverbLevel(currentReverbIndex, 1.0f);
-            }
-            else
-            {
-                // fuera de zonas, reverb OFF
-                playerFootsteps.setReverbLevel(0, 0.0f);
-                playerFootsteps.setReverbLevel(1, 0.0f);
-                playerFootsteps.setReverbLevel(2, 0.0f);
-                playerFootsteps.setReverbLevel(3, 0.0f);
-            }
             //si el sonido esta detenido, se inicia
             PLAYBACK_STATE playbackState;
             //estado actual de la instancia de sonido
@@ -120,8 +104,14 @@ public class CharacterManager : MonoBehaviour
         ReverbManager reverbZone = other.GetComponent<ReverbManager>();
         if(reverbZone != null)
         {
+            previousReverbIndex = currentReverbIndex;
             currentReverbIndex = reverbZone.reverbIndex;
-            Debug.Log($"Entramos en zona Reverb: {other.name}, Preset: {reverbZone.preset}, Index: {reverbZone.reverbIndex}");
+
+            if (reverbFadeCoroutine != null)
+            {
+                StopCoroutine(reverbFadeCoroutine);
+            }
+            reverbFadeCoroutine = StartCoroutine(FadeReverbSmooth(previousReverbIndex, currentReverbIndex));
         }
     }
     private void OnTriggerExit(Collider other)
@@ -129,12 +119,48 @@ public class CharacterManager : MonoBehaviour
         ReverbManager reverbZone = other.GetComponent<ReverbManager>();
         if(reverbZone != null)
         {
+            previousReverbIndex = currentReverbIndex ;
             currentReverbIndex = -1;
-            Debug.Log($"Salimos de zona Reverb: {other.name}, Preset: {reverbZone.preset}");
+            if (reverbFadeCoroutine != null)
+            {
+                StopCoroutine(reverbFadeCoroutine);
+            }
+            reverbFadeCoroutine = StartCoroutine(FadeReverbSmooth(previousReverbIndex, currentReverbIndex));
         }
     }
     private void OnDestroy()
     {
         playerFootsteps.release();
+    }
+    private IEnumerator FadeReverbSmooth(int fromIndex, int toIndex)
+    {
+
+        float time = 0f;
+
+        while (time < fade)
+        {
+            time += Time.deltaTime;
+            float t = time / fade;
+
+            if(fromIndex >= 0)
+            {
+                playerFootsteps.setReverbLevel(fromIndex, Mathf.Lerp(1f,0f,t));
+            }
+            if (toIndex >= 0)
+            {
+                playerFootsteps.setReverbLevel(toIndex, Mathf.Lerp(0f, 1f, t));
+            }
+
+
+            yield return null;
+        }
+        if (fromIndex >= 0)
+        {
+            playerFootsteps.setReverbLevel(fromIndex, 0f);
+        }
+        if (toIndex >= 0)
+        {
+            playerFootsteps.setReverbLevel(toIndex, 1f);
+        }
     }
 }

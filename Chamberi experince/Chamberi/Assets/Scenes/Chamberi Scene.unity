@@ -1753,7 +1753,7 @@ GameObject:
   - component: {fileID: 48345986}
   - component: {fileID: 48345987}
   m_Layer: 0
-  m_Name: FMOD_Reverb_anden
+  m_Name: Reverb_anden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1768,8 +1768,8 @@ Transform:
   m_GameObject: {fileID: 48345984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.4, y: -32.7, z: 66.2}
-  m_LocalScale: {x: 136.21838, y: 5, z: 18.373251}
+  m_LocalPosition: {x: 73.9, y: -32.7, z: 66.2}
+  m_LocalScale: {x: 58.920246, y: 5, z: 18.373251}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 661630017}
@@ -19690,8 +19690,8 @@ Transform:
   m_GameObject: {fileID: 600703555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.8, y: -25, z: 11.221}
-  m_LocalScale: {x: 31.284025, y: 11.800238, z: 94.09226}
+  m_LocalPosition: {x: 16.7, y: -25, z: 8.2}
+  m_LocalScale: {x: 26.90395, y: 11.800238, z: 59.83233}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 661630017}
@@ -39783,7 +39783,7 @@ Transform:
   m_GameObject: {fileID: 1287936767}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 53.2, y: -32.1, z: 69.4}
+  m_LocalPosition: {x: 43.9, y: -32.1, z: 69.4}
   m_LocalScale: {x: 10, y: 103.44108, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39827,7 +39827,7 @@ MonoBehaviour:
   reverbIndex: 0
   preset: 0
   minDistance: 5
-  maxDistance: 20
+  maxDistance: 15
 --- !u!4 &1297809137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 41e84e161e4dbef46acdfd108c40f426, type: 3}

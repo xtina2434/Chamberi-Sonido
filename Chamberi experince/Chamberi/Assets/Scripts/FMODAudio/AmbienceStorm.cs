@@ -62,7 +62,6 @@ public class AmbienceStorm : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInside = true;
-            Debug.Log("entro");
         }
     }
 }
