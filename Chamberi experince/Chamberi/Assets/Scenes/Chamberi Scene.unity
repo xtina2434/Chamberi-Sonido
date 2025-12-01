@@ -14982,50 +14982,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423269250}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &424202228
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 424202229}
-  - component: {fileID: 424202230}
-  m_Layer: 0
-  m_Name: Audio Source
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &424202229
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424202228}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 204.91, y: 4.6881943, z: 67.2}
-  m_LocalScale: {x: 4.4598, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1042332852}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &424202230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424202228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0dba8bb6b2783c4fb2419134310d70e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &424268821
 GameObject:
   m_ObjectHideFlags: 0
@@ -18554,7 +18510,7 @@ GameObject:
   - component: {fileID: 553885058}
   - component: {fileID: 553885057}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Reverb_ciudad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20119,6 +20075,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 71a6bd7a9dcd18e49a6d20ac8ee4a697, type: 3}
   m_PrefabInstance: {fileID: 620491195}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &625404219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 625404220}
+  - component: {fileID: 625404221}
+  - component: {fileID: 625404222}
+  m_Layer: 0
+  m_Name: AudioMetro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &625404220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625404219}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 205.3, y: 6.33, z: 68}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1042332852}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &625404221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625404219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 586481372
+      Data2: 1153334583
+      Data3: -1362999405
+      Data4: 1846816764
+    Path: event:/SFX/Metro
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 70
+--- !u!114 &625404222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625404219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3084f94af9873c34897c689760cf79c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &626209310
 GameObject:
   m_ObjectHideFlags: 0
@@ -22759,12 +22791,12 @@ GameObject:
   - component: {fileID: 760157505}
   - component: {fileID: 760157504}
   m_Layer: 0
-  m_Name: Reverb_Anden
+  m_Name: Entrada_Anden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &760157503
 Transform:
   m_ObjectHideFlags: 0
@@ -22774,8 +22806,8 @@ Transform:
   m_GameObject: {fileID: 760157502}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 142.6, y: -31.3, z: 62.5}
-  m_LocalScale: {x: 10, y: 103.44108, z: 10}
+  m_LocalPosition: {x: 51.434, y: -32.392, z: 62.833}
+  m_LocalScale: {x: 3.2229, y: 1, z: 4.5431}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 661630017}
@@ -22789,15 +22821,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 760157502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e6a600b92277e04b8fd5fab2dc46c96, type: 3}
+  m_Script: {fileID: 11500000, guid: d6ff46d50af456e4ea53454690e97c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reverbIndex: 1
-  preset: 1
-  minDistance: 1
-  maxDistance: 10
---- !u!136 &760157505
-CapsuleCollider:
+  metro: {fileID: 1042332855}
+--- !u!65 &760157505
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -22814,11 +22843,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &763084922
 GameObject:
   m_ObjectHideFlags: 0
@@ -24517,11 +24544,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.1
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25203,10 +25230,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <metro>k__BackingField:
     Guid:
-      Data1: 732422606
-      Data2: 1173696450
-      Data3: -384142427
-      Data4: 68547658
+      Data1: 586481372
+      Data2: 1153334583
+      Data3: -1362999405
+      Data4: 1846816764
     Path: event:/SFX/Metro
   <ambience>k__BackingField:
     Guid:
@@ -29741,6 +29768,7 @@ GameObject:
   - component: {fileID: 1042332852}
   - component: {fileID: 1042332853}
   - component: {fileID: 1042332854}
+  - component: {fileID: 1042332855}
   m_Layer: 0
   m_Name: "Tranv\xEDa"
   m_TagString: Untagged
@@ -29757,7 +29785,7 @@ Transform:
   m_GameObject: {fileID: 1042332851}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.2, y: 0, z: 0}
+  m_LocalPosition: {x: 50, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29765,7 +29793,7 @@ Transform:
   - {fileID: 384129030}
   - {fileID: 1626369879}
   - {fileID: 1673426073}
-  - {fileID: 424202229}
+  - {fileID: 625404220}
   m_Father: {fileID: 745697568}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1042332853
@@ -29802,9 +29830,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: {fileID: 8300000, guid: d0fd0818fdba32548b88ef887070c87f, type: 3}
-  source: {fileID: 0}
+  source: {fileID: 1744076892}
   materialPasar: {fileID: 0}
   materialNoPasar: {fileID: 0}
+--- !u!114 &1042332855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042332851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f8062c0e804b74fb07e7afdcdd11d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1045419570
 GameObject:
   m_ObjectHideFlags: 0
@@ -30597,7 +30637,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideMaxDistance: 8
 --- !u!114 &1069774110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69617,7 +69657,7 @@ Transform:
   m_GameObject: {fileID: 1840832030}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.9, y: 56.3, z: 113.6}
+  m_LocalPosition: {x: 40.9, y: 64.26, z: 105.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69652,8 +69692,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideMinDistance: 3
+  OverrideMaxDistance: 14
 --- !u!114 &1840832033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81188,7 +81228,7 @@ Transform:
   m_GameObject: {fileID: 2132488594}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.08, z: -1.81}
+  m_LocalPosition: {x: 0, y: -5.08, z: -2.34}
   m_LocalScale: {x: 1.8797, y: 17.550097, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
