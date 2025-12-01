@@ -5,7 +5,7 @@
 			<value>Electricidad</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{10dc37eb-1b83-4d8d-b30c-e1f2e31b6103}</destination>
@@ -56,7 +56,14 @@
 			<destination>{1b7ebf60-62c3-46cf-b04c-b8b79087904f}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{5e1d308e-fbf0-45dc-8872-5baa06c13ade}" />
+	<object class="EventAutomatableProperties" id="{5e1d308e-fbf0-45dc-8872-5baa06c13ade}">
+		<property name="minimumDistance">
+			<value>2</value>
+		</property>
+		<property name="maximumDistance">
+			<value>4.20000029</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{57b40349-1e5c-4d80-81b2-fbd07ed5c1f2}" />
 	<object class="GroupTrack" id="{55d008a8-306d-440b-9662-4a649e8ea427}">
 		<relationship name="modules">
@@ -123,10 +130,10 @@
 	</object>
 	<object class="LoopRegion" id="{941b33bc-7748-458e-bded-a052a6f7c405}">
 		<property name="position">
-			<value>0</value>
+			<value>0.5</value>
 		</property>
 		<property name="length">
-			<value>15</value>
+			<value>14</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{c0bbbfec-21e7-4bfe-8b34-ac3c3bad9145}</destination>
@@ -138,6 +145,7 @@
 	<object class="MixerBusEffectChain" id="{f20277aa-af2e-478d-b55a-ffa37b11adcd}">
 		<relationship name="effects">
 			<destination>{610f9771-f575-4603-b579-4e2268991fb8}</destination>
+			<destination>{1a681f68-f076-4f19-9c2e-c4c0c81a5cbe}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{edb59f80-9712-4541-a068-60acb9842467}" />
@@ -180,6 +188,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{ce0b42f1-efa0-4785-9a76-a1fc71f0923f}" />
 	<object class="MixerBusFader" id="{610f9771-f575-4603-b579-4e2268991fb8}" />
+	<object class="SpatialiserEffect" id="{1a681f68-f076-4f19-9c2e-c4c0c81a5cbe}" />
 	<object class="AutomationPoint" id="{2062ca0b-7bc1-4d38-b8d6-00c5c85f6258}">
 		<property name="position">
 			<value>0</value>
