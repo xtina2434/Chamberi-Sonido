@@ -47,7 +47,7 @@ public class AmbienceStorm : MonoBehaviour
             // target es el valor que representa 'intensityValue' entre 0.5 y 1  
             float target = Mathf.InverseLerp(0.5f, 1f, intensityValue);  
 
-            // La frecuencia oscila segun la intensidad de la torments
+            // La frecuencia oscila segun la intensidad de la tormenta
             frequencyValue = Mathf.PingPong(Time.time * frequencySpeed, 1f) * target;
         }
 
