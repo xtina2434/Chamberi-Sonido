@@ -11091,6 +11091,8 @@ GameObject:
   - component: {fileID: 305567066}
   - component: {fileID: 305567068}
   - component: {fileID: 305567067}
+  - component: {fileID: 305567070}
+  - component: {fileID: 305567069}
   m_Layer: 0
   m_Name: Vending_machine (3)
   m_TagString: Untagged
@@ -11163,6 +11165,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305567065}
   m_Mesh: {fileID: -9059808275521917409, guid: b012f6cadd440a84b8713108d3e7372e, type: 3}
+--- !u!114 &305567069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305567065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bacd151a642ede8459195a9e80640a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverbIndex: 2
+--- !u!114 &305567070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305567065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -493320785
+      Data2: 1201258587
+      Data3: -2034240895
+      Data4: -614270020
+    Path: event:/SFX/Maquina
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &311263514
 GameObject:
   m_ObjectHideFlags: 0
@@ -30156,6 +30202,13 @@ MonoBehaviour:
       Data3: -1820473173
       Data4: 2132269364
     Path: event:/SFX/Gotas
+  <maquina>k__BackingField:
+    Guid:
+      Data1: -493320785
+      Data2: 1201258587
+      Data3: -2034240895
+      Data4: -614270020
+    Path: event:/SFX/Maquina
 --- !u!1001 &812018815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41159,6 +41212,8 @@ GameObject:
   - component: {fileID: 1086204489}
   - component: {fileID: 1086204491}
   - component: {fileID: 1086204490}
+  - component: {fileID: 1086204493}
+  - component: {fileID: 1086204492}
   m_Layer: 0
   m_Name: Vending_machine (5)
   m_TagString: Untagged
@@ -41231,6 +41286,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086204488}
   m_Mesh: {fileID: -9059808275521917409, guid: b012f6cadd440a84b8713108d3e7372e, type: 3}
+--- !u!114 &1086204492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086204488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -493320785
+      Data2: 1201258587
+      Data3: -2034240895
+      Data4: -614270020
+    Path: event:/SFX/Maquina
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 7
+--- !u!114 &1086204493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086204488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bacd151a642ede8459195a9e80640a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverbIndex: 1
 --- !u!1 &1092280876 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3730148557346603298, guid: 71a6bd7a9dcd18e49a6d20ac8ee4a697, type: 3}
@@ -63325,6 +63424,8 @@ GameObject:
   - component: {fileID: 1469910491}
   - component: {fileID: 1469910493}
   - component: {fileID: 1469910492}
+  - component: {fileID: 1469910495}
+  - component: {fileID: 1469910494}
   m_Layer: 0
   m_Name: Vending_machine (1)
   m_TagString: Untagged
@@ -63397,6 +63498,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469910490}
   m_Mesh: {fileID: -9059808275521917409, guid: b012f6cadd440a84b8713108d3e7372e, type: 3}
+--- !u!114 &1469910494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469910490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -493320785
+      Data2: 1201258587
+      Data3: -2034240895
+      Data4: -614270020
+    Path: event:/SFX/Maquina
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1469910495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469910490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bacd151a642ede8459195a9e80640a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverbIndex: 2
 --- !u!1 &1470331348
 GameObject:
   m_ObjectHideFlags: 0
@@ -85663,6 +85808,8 @@ GameObject:
   - component: {fileID: 2079310029}
   - component: {fileID: 2079310031}
   - component: {fileID: 2079310030}
+  - component: {fileID: 2079310033}
+  - component: {fileID: 2079310032}
   m_Layer: 0
   m_Name: Vending_machine (2)
   m_TagString: Untagged
@@ -85735,6 +85882,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079310028}
   m_Mesh: {fileID: -9059808275521917409, guid: b012f6cadd440a84b8713108d3e7372e, type: 3}
+--- !u!114 &2079310032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079310028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bacd151a642ede8459195a9e80640a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverbIndex: 2
+--- !u!114 &2079310033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079310028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -493320785
+      Data2: 1201258587
+      Data3: -2034240895
+      Data4: -614270020
+    Path: event:/SFX/Maquina
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2089938105
 GameObject:
   m_ObjectHideFlags: 0

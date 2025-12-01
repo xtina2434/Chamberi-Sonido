@@ -30,7 +30,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         InitializeAmbience(FMODEvents.instance.ambience);
-        //InitializeTormenta(FMODEvents.instance.tormenta);
+        InitializeTormenta(FMODEvents.instance.tormenta);
     }
 
     // Inicializa el evento de ambiente creepy
