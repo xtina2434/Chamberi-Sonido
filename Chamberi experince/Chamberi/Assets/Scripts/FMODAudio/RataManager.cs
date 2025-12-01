@@ -8,6 +8,7 @@ public class RataManager : MonoBehaviour
     private EventInstance instance;
     private int reverbIndex = 1;
 
+    // Aplica reverb de la zona del anden a la instancia del evento del sonido de la rata
     void Start()
     {
         emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();

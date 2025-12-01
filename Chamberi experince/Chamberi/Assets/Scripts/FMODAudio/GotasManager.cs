@@ -9,6 +9,7 @@ public class GotasManager : MonoBehaviour
     private EventInstance instance;
     private int reverbIndex = 0;
 
+    // Aplica reverb de la zona del tunel a la instancia del evento de gotas de agua
     void Start()
     {
         emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();

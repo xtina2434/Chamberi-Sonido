@@ -9,7 +9,8 @@ public class MetroDoppler : MonoBehaviour
     private FMODUnity.StudioEventEmitter emitter;
     private EventInstance instance;
     private int reverbIndex = 1;
-    // Start is called before the first frame update
+
+    // Aplica reverb de la zona del anden a la instancia del evento del metro
     void Start()
     {
         emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
@@ -17,9 +18,9 @@ public class MetroDoppler : MonoBehaviour
         instance.setReverbLevel(reverbIndex, 1.0f);
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // Actualiza la posicion 3D de la fuente de sonido (el metro se mueve)
         instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
     }
 }

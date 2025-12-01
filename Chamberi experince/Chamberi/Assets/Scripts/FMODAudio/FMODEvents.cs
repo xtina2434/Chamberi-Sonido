@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
+
+// Almacena todas las referencias a eventos FMOD usados en la escena 
+// Permite acceso global implementando el patron singleton
 public class FMODEvents : MonoBehaviour
 {
     [field: Header("Metro SFX")]
@@ -27,6 +30,7 @@ public class FMODEvents : MonoBehaviour
     public static FMODEvents instance { get; private set; }
     private void Awake()
     {
+        // Evita tener mas de una instancia
         if (instance != null)
         {
             Debug.LogError("Se ha encontrado mas de un FMODEvents script en la escena.");
